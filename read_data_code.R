@@ -10,6 +10,9 @@ eco_4$Fecha_Hora_Retiro[3]
 eco_3 <- read.csv('2020-05.csv')
 dim(eco_3)
 head(eco_3)
+
+eco_3 <- arrange(eco_3,Fecha_Hora_Retiro)
+
 hora_retiro <- eco_3$Fecha_Hora_Retiro
 
 otra <- tidyr::separate(eco_3, Fecha_Hora_Retiro, 
@@ -39,3 +42,5 @@ ot <- read.csv('Mayo20.csv')
 dim(ot)
 glimpse(ot)
 head(ot)
+
+arrange(ot,Fecha_Retiro)
