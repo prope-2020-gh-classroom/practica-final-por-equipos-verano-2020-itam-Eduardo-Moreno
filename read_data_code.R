@@ -28,3 +28,14 @@ base_bien <- otra[,2:10]
 head(base_bien)
 base_bien$Hora_Arribo[1]
 length(eco_5$Hora_Arribo)
+
+
+glimpse(eco_5)
+glimpse(base_bien)
+
+write.csv(base_bien,file='Mayo20.csv',row.names = F)
+
+ot <- read.csv('Mayo20.csv')
+dim(ot)
+glimpse(ot)
+head(ot)
