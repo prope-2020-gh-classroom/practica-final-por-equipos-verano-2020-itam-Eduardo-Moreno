@@ -50,4 +50,91 @@ glimpse(base_bien)
 # La escribimos de nuevo
 write.csv(base_bien,file='Mayo20.csv',row.names = F)
 
+#### SEGUNDA PARTE DE LIMPIEZA #####
+
+# Clear workspace
+rm(list=ls())
+
+# Packages
+library(tidyverse)
+library(lubridate)
+
+# Setting working directory
+setwd("~/Documents/Prope20MCD/Practicas_equipos/practica-final-por-equipos-verano-2020-itam-Eduardo-Moreno")
+
+# Data
+may_raw_20 <- read.csv('Mayo20.csv')
+
+# Observamos datos
+glimpse(may_19)
+glimpse(may_raw_20)
+
+# Mayo tiene solo 31 dias
+length(unique(may_20$Fecha_Arribo))
+length(unique(may_19$Fecha_Retiro))
+
+# Separando fechas          
+may_20 <- separate(may_raw_20,Fecha_Retiro,
+                   c('Dia_Re','Mes_Re','Anio_Re'))
+may_20 <- separate(may_20,Fecha_Arribo,
+                   c('Dia_Ar','Mes_Ar','Anio_Ar'))
+
+# Haciedolas numericas
+may_20[,c(5,6,7,10,11,12)] <- sapply(may_20[,c(5,6,7,10,11,12)],as.numeric)
+
+good_may_20 <- may_20 %>% 
+  filter(Mes_Re == 5)
+
+write.csv(good_may_20,file='Mayo20.csv',row.names = F)
+
+
+# Ahora base del 2019
+rm(list=ls())
+
+# Data
+may_raw_19 <- read.csv('Mayo19.csv')
+
+# Observamos datos
+glimpse(may_raw_19)
+
+# Mayo tiene solo 31 dias
+length(unique(may_raw_19$Fecha_Retiro))
+
+# Separando fechas          
+may_19 <- separate(may_raw_19,Fecha_Retiro,
+                   c('Dia_Re','Mes_Re','Anio_Re'))
+may_19 <- separate(may_19,Fecha_Arribo,
+                   c('Dia_Ar','Mes_Ar','Anio_Ar'))
+
+# Haciedolas numericas
+may_19[,c(5,6,7,10,11,12)] <- sapply(may_19[,c(5,6,7,10,11,12)],as.numeric)
+
+dim(good_may_19)
+
+good_may_19 <- may_19 %>% 
+  filter(Mes_Re == 5)
+
+write.csv(good_may_19,file='Mayo19.csv',row.names = F)
+
+unique(good_may_19$Mes_Re)
+
+
+
+
+
+
+
+# horas pico
+# descriptivos
+# splines
+# rutas, salida-llegada
+# tablas cruzadas
+# las cicloestaciones más usadas
+# tiempo promedio
+# ve lo de geolocalizacion
+# diferencia de medias, 
+
+
+
+
 
