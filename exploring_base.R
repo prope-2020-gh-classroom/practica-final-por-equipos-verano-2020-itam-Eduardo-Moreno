@@ -15,3 +15,5 @@ may_19 <- read.csv('Mayo19.csv')
 # Observamos datos
 glimpse(may_19)
 glimpse(may_20)
+
+#
