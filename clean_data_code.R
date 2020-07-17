@@ -124,6 +124,41 @@ unique(good_may_19$Mes_Re)
 
 
 
+
+ggplot(data = may_19, aes(x = Genero_Usuario, fill = Genero_Usuario)) +
+  geom_bar(aes(y = ..count../(sum(..count..)))) +
+  ggtitle("Género de usuarios") + 
+  xlab("Género") +
+  ylab("Proporción") +
+  theme_light()
+
+ggplot(data = may_19, aes(x = Edad_Usuario)) +
+  geom_bar(aes(y = ..count../(sum(..count..))), fill = "darkblue") +
+  ggtitle("Edad de usuarios") + 
+  xlab("Edad") +
+  ylab("Proporción") +
+  theme_light()
+
+ggplot(data = may_19, aes(x = Edad_Usuario, fill = Genero_Usuario)) +
+  geom_bar(aes(y = ..count../(sum(..count..)))) +
+  ggtitle("Edad de usuarios por sexo") + 
+  xlab("Edad") +
+  ylab("Proporción") +
+  theme_light()
+
+ggplot(data = mayo_19, aes(x = Bici)) +
+  geom_bar(fill = "darkblue") +
+  ggtitle("ID de bicicletas") + 
+  xlab("ID") +
+  ylab("Proporción") +
+  theme_light()
+
+ggplot(data = mayo_19, aes(x = Bici, fill = Genero_Usuario)) +
+  geom_bar(aes(y = ..count../(sum(..count..)))) +
+  ggtitle("ID de bicicletas por sexo") + 
+  xlab("ID") +
+  ylab("Proporción") +
+  theme_light()
 # horas pico
 # descriptivos
 # splines

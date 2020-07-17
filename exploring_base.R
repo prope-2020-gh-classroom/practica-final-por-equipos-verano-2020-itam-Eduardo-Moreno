@@ -37,6 +37,9 @@ rgb(102,209,188,maxColorValue = 255,alpha = 200)
 rgb(241,158,88,maxColorValue = 255,alpha = 255)
 rgb(150,150,150,maxColorValue = 255,alpha = 255)
 
+rgb(233,93,89,maxColorValue = 255,alpha = 255)
+rgb(69,180,184,maxColorValue = 255,alpha = 255)
+
 hist(edad_19,
      xlim=c(15,80),ylim=c(0,45000),axes=F,
      xlab='',ylab='',main='Histograma Edad',
@@ -50,41 +53,64 @@ hist(edad_20,add=T,
      col='#F19E58',
      border='#969696FF')
 
+gen <- c(table(may_19$Genero_Usuario),table(may_20$Genero_Usuario))
+gen[2]
+
+barplot(gen,axes=F,space = 1,ylim=c(0,gen[2]*1.2))
+axis(2,las=2)
+text(1.5,gen[1],paste(gen[1]))
+text(3.5,gen[2],paste(gen[2]))
+text(5.5,gen[3],paste(gen[3]))
+text(7.5,gen[4],paste(gen[4]))
+mtext('2019',1,at=2.5,padj = 3)
+mtext('2020',1,at=6.5,padj = 3)
 
 
 
+hist(may_19$Ciclo_Estacion_Retiro)
+max(may_20$Ciclo_Estacion_Retiro)
+which(may_20$Ciclo_Estacion_Retiro==1002)
 
-ggplot(data = may_19, aes(x = Genero_Usuario, fill = Genero_Usuario)) +
-geom_bar(aes(y = ..count../(sum(..count..)))) +
-  ggtitle("Género de usuarios") + 
-  xlab("Género") +
-  ylab("Proporción") +
-  theme_light()
 
-ggplot(data = may_19, aes(x = Edad_Usuario)) +
-  geom_bar(aes(y = ..count../(sum(..count..))), fill = "darkblue") +
-  ggtitle("Edad de usuarios") + 
-  xlab("Edad") +
-  ylab("Proporción") +
-  theme_light()
+reti_19 <- (may_19$Ciclo_Estacion_Retiro)
+arri_19 <- (may_19$Ciclo_Estacion_Arribo)
+reti_20 <- (may_20$Ciclo_Estacion_Arribo)
+arri_20 <- (may_20$Ciclo_Estacion_Retiro)
+length(reti_20)
 
-ggplot(data = mayo_19, aes(x = Edad_Usuario, fill = Genero_Usuario)) +
-  geom_bar(aes(y = ..count../(sum(..count..)))) +
-  ggtitle("Edad de usuarios por sexo") + 
-  xlab("Edad") +
-  ylab("Proporción") +
-  theme_light()
+uno <- count(may_20,Ciclo_Estacion_Retiro)
+summary(uno)
 
-ggplot(data = mayo_19, aes(x = Bici)) +
-  geom_bar(fill = "darkblue") +
-  ggtitle("ID de bicicletas") + 
-  xlab("ID") +
-  ylab("Proporción") +
-  theme_light()
+eje_x <- seq(0,24,1)
+eje_y <- seq(0,24,1)
+pos
+plot(0,type='n', xlim=c(0,500),ylim=c(0,500),
+     axes=F,xlab='',ylab='')
 
-ggplot(data = mayo_19, aes(x = Bici, fill = Genero_Usuario)) +
-  geom_bar(aes(y = ..count../(sum(..count..)))) +
-  ggtitle("ID de bicicletas por sexo") + 
-  xlab("ID") +
-  ylab("Proporción") +
-  theme_light()
+axis(1)
+axis(2,las=2)
+points(eje_x,eje_y)
+
+reti_20 <-  filter(may_20,Ciclo_Estacion_Retiro <= 480)$Ciclo_Estacion_Retiro
+arri_20 <-  filter(may_20,Ciclo_Estacion_Arribo <= 480)$Ciclo_Estacion_Arribo
+reti_19 <-  filter(may_19,Ciclo_Estacion_Retiro <= 480)$Ciclo_Estacion_Retiro
+arri_19 <-  filter(may_19,Ciclo_Estacion_Arribo <= 480)$Ciclo_Estacion_Arribo
+
+estaciones_20 <- may_20 %>% 
+  filter(Ciclo_Estacion_Retiro <= 480) %>% 
+  filter(Ciclo_Estacion_Arribo <= 480) %>% 
+  select(Ciclo_Estacion_Retiro,Ciclo_Estacion_Arribo)
+
+estaciones_19 <- may_19 %>% 
+  filter(Ciclo_Estacion_Retiro <= 480) %>% 
+  filter(Ciclo_Estacion_Arribo <= 480) %>% 
+  select(Ciclo_Estacion_Retiro,Ciclo_Estacion_Arribo)
+
+dim(estaciones_20)
+dim(estaciones_19)
+
+hist(estaciones_19[,2],col='#45B4B822',border='#45B4B855',breaks=seq(0,480,3))
+hist(estaciones_19[,1],col='#45B4B833',border='#45B4B877',add=T,breaks=seq(0,480,3))
+
+hist(estaciones_20[,1],add=T,col='#E95D5922',border='#E95D59AA',breaks=seq(0,480,3))
+hist(estaciones_20[,2],add=T,col='#E95D5911',border='#E95D59AA',breaks=seq(0,480,3))
