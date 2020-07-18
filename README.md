@@ -5,9 +5,11 @@ Información del proyecto final propedéutico: Análisis de datos de ECOBICI
 
 Equipo 6:
 
-Darío Díaz Cuevas  (DarioDC)[https://github.com/DarioDC]
-Eduardo Moreno Ortíz (Eduardo-Moreno)[https://github.com/Eduardo-Moreno]
-Elena Villalobos Nolasco (ElenaVillalobos) [https://github.com/ElenaVillalobos]
+Darío Díaz Cuevas  [DarioDC](https://github.com/DarioDC)
+
+Eduardo Moreno Ortíz [Eduardo-Moreno](https://github.com/Eduardo-Moreno)
+
+Elena Villalobos Nolasco [ElenaVillalobos] (https://github.com/ElenaVillalobos)
 
 El presente proyecto final tuvo como objetivo analizar bases de datos proporcionadas por el sistema de bicicletas públicas de la Ciudad de México, ECOBICI. 
 
@@ -15,6 +17,6 @@ El trabajo escrito se divide en tres capítulos que describen los objetivos pres
 
 Referencias datos:
 
-(OpenDataEcobici)[https://www.ecobici.cdmx.gob.mx/es/informacion-del-servicio/open-data]
+[OpenDataEcobici](https://www.ecobici.cdmx.gob.mx/es/informacion-del-servicio/open-data)
 
 Referencias texto:
