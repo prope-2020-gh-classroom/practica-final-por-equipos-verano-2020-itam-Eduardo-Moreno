@@ -9,7 +9,7 @@ Darío Díaz Cuevas  [DarioDC](https://github.com/DarioDC)
 
 Eduardo Moreno Ortíz [Eduardo-Moreno](https://github.com/Eduardo-Moreno)
 
-Elena Villalobos Nolasco [ElenaVillalobos] (https://github.com/ElenaVillalobos)
+Elena Villalobos Nolasco [ElenaVillalobos](https://github.com/ElenaVillalobos)
 
 El presente proyecto final tuvo como objetivo analizar bases de datos proporcionadas por el sistema de bicicletas públicas de la Ciudad de México, ECOBICI. 
 
