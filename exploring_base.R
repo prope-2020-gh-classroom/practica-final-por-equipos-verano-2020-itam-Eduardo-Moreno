@@ -114,3 +114,23 @@ hist(estaciones_19[,1],col='#45B4B833',border='#45B4B877',add=T,breaks=seq(0,480
 
 hist(estaciones_20[,1],add=T,col='#E95D5922',border='#E95D59AA',breaks=seq(0,480,3))
 hist(estaciones_20[,2],add=T,col='#E95D5911',border='#E95D59AA',breaks=seq(0,480,3))
+
+
+dias_sem <- c('m','v', rep(c('l','m','v'),4))
+
+c(1,3,6,8,10,13,15,17,20,22,24,27,29,31)
+hist(may_19$Dia_Re,col='blue',breaks=seq(0,31,0.5),axes=F)
+axis(1,at=c(1,3,6,8,10,13,15,17,20,22,24,27,29,31),labels = dias_sem,hadj = 0.5)
+axis(1,at=seq(1,31,1))
+
+31/3
+
+dias_sem <- c('M','V', rep(c('L','M','V'),4))
+
+hist(may_19$Dia_Re,col='blue',border='gray48',breaks=seq(0,31,0.5),
+     axes=F,xlab='',ylab='',main='')
+axis(1,)
+
+
+hist(may_20$Dia_Re,col='red',breaks=seq(1,31,1))
+
