@@ -4,15 +4,18 @@ __________________________
 
 ### Equipo 6:
 
-Darío  [DarioDC](https://github.com/DarioDC)
+Darío:  [DarioDC](https://github.com/DarioDC)
 
-Eduardo [Eduardo-Moreno](https://github.com/Eduardo-Moreno)
+Eduardo: [Eduardo-Moreno](https://github.com/Eduardo-Moreno)
 
-Elena [ElenaVillalobos](https://github.com/ElenaVillalobos)
+Elena: [ElenaVillalobos](https://github.com/ElenaVillalobos)
 
-### Tema
+### Tema:
 
-Análisis de datos de ECOBICI
+#### Análisis de datos de ECOBICI
+
+Específicamente se analisaron las bases de: 
+
 - Mayo 2019
 - Mayo 2020
 - Número de viajes por mes desde febrero 2010. 
