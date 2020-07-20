@@ -2,7 +2,8 @@
 
 __________________________
 
-### Equipo $6$:
+### Equipo 6
+
 
 Darío Díaz:  [DarioDC](https://github.com/DarioDC)
 
@@ -16,9 +17,9 @@ Elena Villalobos: [ElenaVillalobos](https://github.com/ElenaVillalobos)
 
 Específicamente se analisaron las bases de: 
 
-- Mayo $2019$
-- Mayo $2020$
-- Número de viajes por mes desde febrero $2010$ hasta mayo $2020$
+- Mayo 2019
+- Mayo 2020
+- Número de viajes por mes desde febrero 2010 hasta mayo 2020
 
 ### Paquetes usados en R
 
