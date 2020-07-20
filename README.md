@@ -24,8 +24,10 @@ Específicamente se analisaron las bases de:
 
 - Tidyverse que incluye dplyr, ggplot2 entre otros.
 - chron
+- lubridate
+- viridis
 - gmodels
-- gridExtra
+- gridExtra, ggExtra
 - IRdisplay
 - dgof
 - MASS
